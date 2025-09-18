@@ -6,3 +6,7 @@ in the [index.html](index.html) file.
 
 View the slides via GitHub Pages at
 <https://jamesbraza.github.io/edge-of-tomorrow-algorithms/>.
+
+If the slides' image(s) aren't rendering,
+please open a GitHub issue;
+likely a URL will need to be updated.
