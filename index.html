@@ -19,9 +19,17 @@
     />
     <title>Edge of Tomorrow Algorithms</title>
 
-    <link rel="stylesheet" type="text/css" href="lib/offline-v2.css" />
+    <link rel="stylesheet" href="reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="reveal.js/dist/theme/black.css" id="theme" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="reveal-viewport theme-font-montserrat theme-color-black-blue">
+  <body class="reveal-viewport theme-font-montserrat">
     <div class="reveal">
       <div class="slides">
         <section class="stack" data-id="4db9b75e12f11e6749d4df3fba5a511b">
@@ -5216,56 +5224,9 @@
       </div>
     </div>
 
-    <script>
-      var SLConfig = {
-        deck: {
-          id: 3460389,
-          slug: "edge-of-tomorrow-algorithms",
-          title: "Edge of Tomorrow Algorithms",
-          description: "",
-          width: 1280,
-          height: 720,
-          margin: 0.05,
-          visibility: "self",
-          published_at: null,
-          sanitize_messages: null,
-          view_count: 0,
-          background_transition: "slide",
-          transition: "slide",
-          theme_id: null,
-          theme_font: "montserrat",
-          theme_color: "black-blue",
-          auto_slide_interval: 0,
-          comments_enabled: false,
-          forking_enabled: false,
-          rolling_links: false,
-          center: false,
-          shuffle: false,
-          should_loop: false,
-          share_notes: false,
-          slide_number: true,
-          slide_count: 11,
-          rtl: false,
-          version: 2,
-          collaborative: null,
-          deck_user_editor_limit: 1,
-          data_updated_at: 1757910413460,
-          font_typekit: null,
-          font_google: null,
-          time_limit: null,
-          navigation_mode: "default",
-          upsizing_enabled: true,
-          language: "en",
-        },
-      };
-
-      // Use local fonts
-      SLConfig.fonts_url = "lib/fonts/";
-    </script>
-
-    <script src="lib/reveal.js"></script>
-    <script src="lib/reveal-plugins.js"></script>
-    <script src="lib/offline.js"></script>
+    <script src="reveal.js/dist/reveal.js"></script>
+    <script src="reveal.js/plugin/zoom/zoom.js"></script>
+    <script src="reveal.js/plugin/notes/notes.js"></script>
 
     <!-- Initialize the presentation -->
     <script>
@@ -5275,34 +5236,12 @@
         margin: 0.05,
 
         hash: true,
-        controls: true,
-        progress: true,
-        mouseWheel: false,
-        showNotes: false,
         slideNumber: true,
-        fragmentInURL: true,
-
-        autoSlide: 0,
-        autoSlideStoppable: true,
-
-        autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
-
         scrollActivationWidth: null,
-
         center: false,
-        shuffle: false,
-        loop: false,
-        rtl: false,
-        navigationMode: "default",
-
-        transition: "slide",
         backgroundTransition: "slide",
 
-        highlight: {
-          escapeHTML: false,
-        },
-
-        plugins: [RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight],
+        plugins: [RevealZoom, RevealNotes],
       });
     </script>
   </body>

@@ -1,0 +1,149 @@
+.theme-font-montserrat .reveal {
+  --r-main-font-size: 30px;
+  --r-heading2-size: 1.65em;
+  --r-heading-text-transform: none;
+  --r-heading-font:
+    "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --r-main-font:
+    "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+.reveal .sl-block {
+  position: absolute;
+  pointer-events: none;
+}
+.reveal .sl-block .sl-block-style {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.reveal .sl-block .sl-block-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+/* Text blocks fill their rectangles and center content vertically */
+.reveal .sl-block[data-block-type="text"] .sl-block-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Honor explicit center/left/right alignment set on content blocks */
+.reveal
+  .sl-block[data-block-type="text"]
+  .sl-block-content[style*="text-align: center"] {
+  align-items: center;
+}
+.reveal
+  .sl-block[data-block-type="text"]
+  .sl-block-content[style*="text-align: left"] {
+  align-items: flex-start;
+}
+.reveal
+  .sl-block[data-block-type="text"]
+  .sl-block-content[style*="text-align: right"] {
+  align-items: flex-end;
+}
+/* If inner paragraph is centered, keep the whole block centered */
+.reveal
+  .sl-block[data-block-type="text"]
+  .sl-block-content[style*="text-align: left"]:has(
+    p[style*="text-align: center"]
+  ) {
+  align-items: center;
+}
+/* N loops chip: match arrow height for perfect centering */
+.reveal .sl-block[data-name="text-797711"] {
+  height: 43px !important;
+}
+/* Ellipsis labels between prompt boxes – adjust without targeting IDs */
+.reveal
+  .sl-block[data-block-type="text"][style*="width: 54.5px"]
+  .sl-block-content {
+  transform: translateY(4px);
+}
+.theme-font-montserrat .reveal .sl-block .sl-block-content p {
+  line-height: 1.05;
+}
+.reveal .sl-block[data-block-type="image"] .sl-block-content {
+  overflow: hidden;
+}
+.reveal .sl-block[data-block-type="image"] .sl-block-content img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  vertical-align: top;
+  margin: 0;
+}
+.reveal .sl-block[data-block-type="image"] .sl-block-content svg,
+.reveal .sl-block[data-block-type="shape"] .sl-block-content svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.reveal .sl-block[data-block-type="shape"] .sl-block-content {
+  overflow: hidden;
+}
+/* Remove default spacing on paragraphs inside text rectangles */
+.reveal .sl-block[data-block-type="text"] .sl-block-content p {
+  margin: 0;
+}
+/* Ensure headings don't add unexpected spacing inside positioned blocks */
+.reveal .sl-block h1,
+.reveal .sl-block h2,
+.reveal .sl-block h3,
+.reveal .sl-block h4,
+.reveal .sl-block h5,
+.reveal .sl-block h6,
+.reveal .sl-block p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.reveal
+  section:not(.stack):not([data-background-interactive="true"]).present
+  .sl-block-content {
+  pointer-events: auto;
+}
+/* Balance headings so multi-word titles wrap naturally across two lines */
+.reveal .sl-block .sl-block-content h1,
+.reveal .sl-block .sl-block-content h2,
+.reveal .sl-block .sl-block-content h3 {
+  text-wrap: balance;
+  word-break: normal;
+  white-space: normal;
+}
+/* Small square step labels (e.g., i=1) next to arrows */
+.reveal
+  .sl-block[data-block-type="text"][style*="width: 43."]
+  .sl-block-content,
+.reveal
+  .sl-block[data-block-type="text"][style*="width: 45px"]
+  .sl-block-content {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+.reveal
+  .sl-block[data-block-type="text"][style*="width: 43."]
+  .sl-block-content
+  p,
+.reveal
+  .sl-block[data-block-type="text"][style*="width: 45px"]
+  .sl-block-content
+  p {
+  line-height: 1;
+}
