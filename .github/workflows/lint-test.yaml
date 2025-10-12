@@ -4,6 +4,7 @@ on:
   pull_request:
   push:
     branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -17,3 +18,8 @@ jobs:
         with:
           node-version: latest
       - uses: pre-commit/action@v3.0.1
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: dieghernan/cff-validator@v4
