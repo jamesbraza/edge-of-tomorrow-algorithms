@@ -1,0 +1,22 @@
+---
+cff-version: 1.2.0
+title: Edge of Tomorrow Algorithms
+type: software
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+authors:
+  - given-names: James D.
+    family-names: Braza
+    affiliation: FutureHouse
+identifiers:
+  - type: url
+    value: https://github.com/jamesbraza/edge-of-tomorrow-algorithms
+    description: Source
+repository-code: https://github.com/jamesbraza/edge-of-tomorrow-algorithms
+url: https://jamesbraza.github.io/edge-of-tomorrow-algorithms/
+keywords:
+  - Recursive Self-Improvement
+  - Reinforcement Learning
+license: Apache-2.0
+date-released: 2025-09-18
